@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  text-align: center;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #222; color: #fff; padding: 20px 0;
+}
+header h1 { margin: 0; }
+nav a {
+  margin: 0 15px; color: #fff; text-decoration: none;
+}
+section { padding: 40px; }
+.btn {
+  background: #3498db; color: #fff;
+  padding: 10px 20px; text-decoration: none;
+  border-radius: 5px;
+}
+.project-card {
+  background: #fff; border: 1px solid #ddd;
+  padding: 20px; margin: 20px auto;
+  max-width: 600px; border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
