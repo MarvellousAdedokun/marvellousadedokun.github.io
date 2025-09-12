@@ -1,26 +1,130 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0; padding: 0;
-  text-align: center;
-  background: #f9f9f9;
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f7fa;
   color: #333;
 }
+
+/* Header */
 header {
-  background: #222; color: #fff; padding: 20px 0;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
-header h1 { margin: 0; }
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 15px;
+}
+
 nav a {
-  margin: 0 15px; color: #fff; text-decoration: none;
+  margin: 0 15px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
-section { padding: 40px; }
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
 .btn {
-  background: #3498db; color: #fff;
-  padding: 10px 20px; text-decoration: none;
-  border-radius: 5px;
+  display: inline-block;
+  background: #3498db;
+  color: #fff;
+  padding: 12px 24px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
+
+.btn:hover {
+  background: #1d6fa5;
+  transform: translateY(-2px);
+}
+
+/* Project Cards */
 .project-card {
-  background: #fff; border: 1px solid #ddd;
-  padding: 20px; margin: 20px auto;
-  max-width: 600px; border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 650px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-card a:hover {
+  color: #3498db;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Contact Links */
+section p a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+section p a:hover {
+  text-decoration: underline;
 }
