@@ -180,3 +180,38 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* SMALL HERO FOR INNER PAGES */
+.hero-small {
+  background: #0f172a;
+  color: #fff;
+  padding: 4rem 0 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero-small .hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-small .tagline {
+  color: #38bdf8;
+  font-weight: 400;
+}
+
+/* ABOUT SECTION */
+.about p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.about b {
+  color: #0f172a;
+}
+
+.about i {
+  color: #475569;
+}
