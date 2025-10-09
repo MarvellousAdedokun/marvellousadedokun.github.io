@@ -7,91 +7,111 @@
 
   <!-- SEO -->
   <meta name="description" content="Marvellous Adedokun — Data Scientist passionate about turning data into impactful insights. View projects, skills, and contact info." />
+  <meta property="og:title" content="Marvellous Adedokun | Data Science Portfolio" />
+  <meta property="og:description" content="Turning data into insights that drive impact. Explore my projects and skills in data science, machine learning, and visualization." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="marvel.png" />
 
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- Particle.js (for animated background) -->
+  <!-- Particle.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-  <!-- HERO SECTION -->
+  <!-- HEADER / HERO SECTION -->
   <header class="hero">
-    <div id="particles-js"></div> <!-- animated background -->
+    <div id="particles-js"></div>
 
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>👋 Hi, I’m <span>Marvellous Adedokun</span></h1>
-        <p class="tagline">Data Science Enthusiast | Turning Data into Impact</p>
-        <p>I transform raw data into actionable insights that help organizations make smarter decisions.</p>
-        <a href="project.html" class="btn">🚀 View My Work</a>
-      </div>
+    <div class="header-container">
+      <!-- Navigation -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="project.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
 
-      <div class="hero-image">
-        <img src="marvel.png" alt="Marvellous Adedokun" loading="lazy">
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>👋 Hi, I’m <span>Marvellous Adedokun</span></h1>
+          <p class="tagline">Data Science Enthusiast | Turning Data into Impact</p>
+          <p>I transform raw data into actionable insights that help organizations make smarter decisions.</p>
+          <a href="project.html" class="btn">🚀 View My Work</a>
+        </div>
+
+        <div class="hero-image">
+          <img src="marvel.png" alt="Portrait of Marvellous Adedokun" loading="lazy">
+        </div>
       </div>
     </div>
-
-    <nav class="navbar">
-      <a href="about.html">About</a>
-      <a href="project.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
   <!-- SKILLS SECTION -->
-  <section class="skills">
-    <h2>🧠 Skills & Tools</h2>
-    <div class="skill-grid">
-      <div class="skill">Python</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">Scikit-Learn</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Data Visualization</div>
+  <section class="skills section">
+    <div class="container">
+      <h2>🧠 Skills & Tools</h2>
+      <div class="skill-grid">
+        <div class="skill">Python</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Scikit-Learn</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Data Visualization</div>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section class="projects">
-    <h2>📊 Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Customer Segmentation</h3>
-        <p>Used clustering algorithms to identify customer groups for targeted marketing.</p>
-        <a href="project.html" class="btn-small">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Predictive Sales Model</h3>
-        <p>Built a regression model to forecast sales trends and optimize inventory planning.</p>
-        <a href="project.html" class="btn-small">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Data Dashboard</h3>
-        <p>Designed an interactive Power BI dashboard for real-time business insights.</p>
-        <a href="project.html" class="btn-small">View Project</a>
+  <section class="projects section">
+    <div class="container">
+      <h2>📊 Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Customer Segmentation</h3>
+          <p>Used clustering algorithms to identify customer groups for targeted marketing.</p>
+          <a href="project.html" class="btn-small">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Predictive Sales Model</h3>
+          <p>Built a regression model to forecast sales trends and optimize inventory planning.</p>
+          <a href="project.html" class="btn-small">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Dashboard</h3>
+          <p>Designed an interactive Power BI dashboard for real-time business insights.</p>
+          <a href="project.html" class="btn-small">View Project</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="contact">
-    <h2>📬 Get in Touch</h2>
-    <p>Let’s collaborate or discuss how I can help with your next data project.</p>
-    <div class="social-links">
-      <a href="mailto:your-email@example.com">📧 Email</a>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">💼 LinkedIn</a>
-      <a href="https://github.com/YOUR-GITHUB">🐙 GitHub</a>
+  <section class="contact section">
+    <div class="container">
+      <h2>📬 Get in Touch</h2>
+      <p>Let’s collaborate or discuss how I can help with your next data project.</p>
+      <div class="social-links">
+        <a href="mailto:your-email@example.com" aria-label="Email Marvellous">📧 Email</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" aria-label="LinkedIn Profile">💼 LinkedIn</a>
+        <a href="https://github.com/YOUR-GITHUB" aria-label="GitHub Profile">🐙 GitHub</a>
+      </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Marvellous Adedokun. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Marvellous Adedokun. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Initialize Particles -->
