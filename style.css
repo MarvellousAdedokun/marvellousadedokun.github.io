@@ -301,3 +301,155 @@ footer {
   background: #0ea5e9;
   transform: translateY(-2px);
 }
+
+/* ============================= */
+/* MENTORSHIP PAGE STYLING */
+/* ============================= */
+
+.mentorship-hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 4rem 1.5rem;
+  text-align: left;
+}
+
+.mentorship-hero .hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.mentorship-hero .hero-text {
+  flex: 1 1 450px;
+}
+
+.mentorship-hero .hero-image img {
+  width: 280px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* PRICING SECTION */
+.pricing {
+  background: #f8fafc;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.pricing h2 {
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.tier-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tier-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.tier-card h3 {
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.tier-card .price {
+  font-size: 1.8rem;
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.tier-card .monthly {
+  color: #475569;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tier-card ul li {
+  margin: 0.4rem 0;
+  color: #334155;
+}
+
+.tier-card.highlight {
+  border: 2px solid #0ea5e9;
+  background: linear-gradient(145deg, #e0f2fe, #ffffff);
+  transform: scale(1.03);
+}
+
+/* PAYMENT SECTION */
+.payment {
+  background: #fff;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.bank-details {
+  background: #f1f5f9;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.bank-details h3 {
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+}
+
+/* GUARANTEE SECTION */
+.guarantee {
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  border-top: 4px solid #0284c7;
+}
+
+.guarantee h2 {
+  margin-bottom: 1rem;
+}
+
+.guarantee small {
+  display: block;
+  margin-top: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #0284c7;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0369a1;
+}
