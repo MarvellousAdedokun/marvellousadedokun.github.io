@@ -229,3 +229,28 @@ footer {
   color: #334155;
   margin-bottom: 1rem;
 }
+
+/* CONTACT PAGE */
+.contact-links {
+  margin-top: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.contact-links p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #1e293b;
+}
+
+.contact-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #0ea5e9;
+  text-decoration: underline;
+}
