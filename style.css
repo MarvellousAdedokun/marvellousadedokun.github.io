@@ -453,3 +453,44 @@ footer {
 .btn:hover {
   background: #0369a1;
 }
+
+/* ============================= */
+/* GLOBAL HEADER FIX */
+/* ============================= */
+
+.page-header {
+  background: #0f172a; /* same as other pages */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.page-header h1 {
+  color: #38bdf8; /* your cyan accent color */
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header .subtitle {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.page-header .navbar {
+  margin-top: 1rem;
+}
+
+.page-header .navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.page-header .navbar a:hover,
+.page-header .navbar a.active {
+  color: #38bdf8;
+}
