@@ -45,22 +45,22 @@ body {
   padding-bottom: 4rem;
 }
 
+/* FIX: Keep particles behind clickable elements */
 #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  top: 0;
+  left: 0;
+  z-index: 0; /* keep it behind */
 }
 
-.hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+.hero-content,
+.navbar {
   position: relative;
-  z-index: 1;
-  padding-top: 2rem;
+  z-index: 2; /* keep it above particles */
 }
+
 
 .hero-text {
   flex: 1 1 50%;
