@@ -6,7 +6,7 @@
   <title>Contact | Marvellous Adedokun</title>
 
   <!-- SEO -->
-  <meta name="description" content="Get in touch with Marvellous Adedokun — Data Science Enthusiast. Connect via email, LinkedIn, GitHub, or DataCamp portfolio." />
+  <meta name="description" content="Get in touch with Marvellous Adedokun — Data Science Enthusiast. Contact via email, LinkedIn, or the form below." />
   <meta name="author" content="Marvellous Adedokun" />
 
   <!-- Fonts & Styles -->
@@ -18,35 +18,46 @@
   <!-- HEADER -->
   <header class="hero hero-small">
     <div class="header-container">
-      <!-- Navigation -->
       <nav class="navbar" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="project.html" class="nav-link">Projects</a>
+        <a href="projects.html" class="nav-link">Projects</a>
         <a href="contact.html" class="nav-link active">Contact</a>
       </nav>
 
-      <!-- Page Title -->
       <div class="hero-text">
         <h1>📬 Contact Me</h1>
-        <p class="tagline">Let’s connect and collaborate on data-driven projects</p>
+        <p class="tagline">Let’s connect — I’d love to hear from you!</p>
       </div>
     </div>
   </header>
 
   <!-- CONTACT SECTION -->
-  <section class="contact section">
+  <main class="contact section">
     <div class="container">
-      <p>Feel free to reach out through any of the platforms below 👇</p>
+      <p>You can reach out through the form below or via social platforms 👇</p>
+
+      <!-- CONTACT FORM -->
+      <form class="contact-form" action="https://formspree.io/f/mzzpprde" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
 
       <div class="contact-links">
         <p>📧 <b>Email:</b> <a href="mailto:adedokunmarvellous@gmail.com">adedokunmarvellous@gmail.com</a></p>
         <p>💼 <b>LinkedIn:</b> <a href="https://linkedin.com/in/marvel-create" target="_blank" rel="noopener noreferrer">linkedin.com/in/marvel-create</a></p>
         <p>🐙 <b>GitHub:</b> <a href="https://github.com/marvel-create" target="_blank" rel="noopener noreferrer">github.com/marvel-create</a></p>
-        <p>📊 <b>DataCamp Portfolio:</b> <a href="https://www.datacamp.com/portfolio/marvel-create" target="_blank" rel="noopener noreferrer">View Portfolio</a></p>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
