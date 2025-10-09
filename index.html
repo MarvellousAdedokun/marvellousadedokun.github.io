@@ -4,37 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marvellous Adedokun | Data Science Portfolio</title>
-  
-  <!-- Meta Tags for SEO -->
-  <meta name="description" content="Portfolio of Marvellous Adedokun — Data Science Enthusiast passionate about turning data into actionable insights." />
-  <meta name="keywords" content="Marvellous Adedokun, Data Science, Machine Learning, Portfolio, Data Analyst, Python, Visualization" />
-  <meta name="author" content="Marvellous Adedokun" />
 
-  <!-- Google Fonts -->
+  <!-- SEO -->
+  <meta name="description" content="Marvellous Adedokun — Data Scientist passionate about turning data into impactful insights. View projects, skills, and contact info." />
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Particle.js (for animated background) -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-  <!-- HEADER / HERO SECTION -->
+  <!-- HERO SECTION -->
   <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>👋 Hi, I’m <span>Marvellous Adedokun</span></h1>
-          <p class="tagline">Data Science Enthusiast | Turning Data into Impact</p>
-          <p class="intro">
-            I help businesses and communities make smarter decisions 
-            by transforming raw data into actionable insights.
-          </p>
-          <a href="project.html" class="btn">🚀 View My Work</a>
-        </div>
+    <div id="particles-js"></div> <!-- animated background -->
 
-        <div class="hero-image">
-          <img src="marvel .png" alt="Marvellous Adedokun" loading="lazy">
-        </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>👋 Hi, I’m <span>Marvellous Adedokun</span></h1>
+        <p class="tagline">Data Science Enthusiast | Turning Data into Impact</p>
+        <p>I transform raw data into actionable insights that help organizations make smarter decisions.</p>
+        <a href="project.html" class="btn">🚀 View My Work</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/marvellous.jpg" alt="Marvellous Adedokun" loading="lazy">
       </div>
     </div>
 
@@ -45,9 +41,71 @@
     </nav>
   </header>
 
-  <!-- FOOTER -->
+  <!-- SKILLS SECTION -->
+  <section class="skills">
+    <h2>🧠 Skills & Tools</h2>
+    <div class="skill-grid">
+      <div class="skill">Python</div>
+      <div class="skill">Pandas</div>
+      <div class="skill">NumPy</div>
+      <div class="skill">Scikit-Learn</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Tableau</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Data Visualization</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects">
+    <h2>📊 Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Customer Segmentation</h3>
+        <p>Used clustering algorithms to identify customer groups for targeted marketing.</p>
+        <a href="project.html" class="btn-small">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Predictive Sales Model</h3>
+        <p>Built a regression model to forecast sales trends and optimize inventory planning.</p>
+        <a href="project.html" class="btn-small">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Data Dashboard</h3>
+        <p>Designed an interactive Power BI dashboard for real-time business insights.</p>
+        <a href="project.html" class="btn-small">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h2>📬 Get in Touch</h2>
+    <p>Let’s collaborate or discuss how I can help with your next data project.</p>
+    <div class="social-links">
+      <a href="mailto:your-email@example.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">💼 LinkedIn</a>
+      <a href="https://github.com/YOUR-GITHUB">🐙 GitHub</a>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Marvellous Adedokun. All rights reserved.</p>
   </footer>
+
+  <!-- Initialize Particles -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {"value": 70},
+        "size": {"value": 3},
+        "move": {"speed": 1},
+        "line_linked": {"enable": true, "distance": 150, "color": "#38bdf8", "opacity": 0.4, "width": 1},
+        "color": {"value": "#38bdf8"}
+      },
+      "interactivity": {"events": {"onhover": {"enable": true, "mode": "repulse"}}}
+    });
+  </script>
 </body>
 </html>
