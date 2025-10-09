@@ -180,3 +180,52 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* PROJECTS PAGE */
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-small {
+  background: #0f172a;
+  color: #fff;
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.hero-small .hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-small .tagline {
+  color: #38bdf8;
+  font-weight: 400;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: #334155;
+  margin-bottom: 1rem;
+}
