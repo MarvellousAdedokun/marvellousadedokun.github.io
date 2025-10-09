@@ -15,12 +15,9 @@
 </head>
 
 <body>
-  <!-- HEADER -->
+  <!-- HEADER (consistent with site) -->
   <header class="page-header">
     <div class="container">
-      <h1>ForgeLabs Mentorship Program</h1>
-      <p class="subtitle">Become a Data Scientist in 6 Months — Learn, Build, and Grow with Expert Guidance.</p>
-
       <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -28,11 +25,13 @@
         <a href="mentorship.html" class="active">Mentorship</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <h1>ForgeLabs Mentorship Program</h1>
+      <p class="subtitle">Become a Data Scientist in 6 Months — Learn, Build, and Grow with Expert Guidance.</p>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero mentorship-hero">
     <div class="container">
       <h2>👨‍🏫 Learn Directly from Marvellous Adedokun</h2>
       <p>CEO & Lead Instructor at <b>ForgeLabs</b> — guiding aspiring data professionals with real-world projects and mentorship.</p>
@@ -90,58 +89,120 @@
     </div>
   </section>
 
+  <!-- REGISTER INTEREST FORM -->
+  <section class="register">
+    <div class="container">
+      <h2>📝 Not Ready Yet? Register Your Interest</h2>
+      <p>We’ll keep you updated on upcoming sessions, mentorship dates, and discounts.</p>
+
+      <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="interest-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="phone" placeholder="Phone Number (optional)" />
+        <textarea name="message" placeholder="Any questions or notes?"></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2025 ForgeLabs | Marvellous Adedokun — All rights reserved.</p>
   </footer>
 
   <style>
-    .hero {
+    /* HERO BACKGROUND FIX */
+    .mentorship-hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
       text-align: center;
       padding: 3rem 1rem;
-      background: #f9fafc;
     }
+
+    .page-header {
+      text-align: center;
+      background: #0f172a;
+      color: white;
+      padding: 1rem;
+    }
+
+    .navbar {
+      margin-bottom: 1rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: 500;
+    }
+
+    .navbar a:hover, .navbar .active {
+      color: #38bdf8;
+    }
+
+    /* PRICING CARD */
     .pricing-card {
       margin-top: 1.5rem;
       display: inline-block;
       padding: 1.5rem 2rem;
       border-radius: 12px;
       background: white;
+      color: #0f172a;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
+
     .old-price {
       text-decoration: line-through;
       color: #999;
       font-size: 1.2rem;
     }
+
     .new-price {
       font-size: 2rem;
       font-weight: 600;
       color: #007bff;
     }
+
     .small-note {
       color: #555;
       font-size: 0.9rem;
     }
+
+    /* SYLLABUS */
+    .syllabus {
+      background: #f9fafc;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
     .syllabus ul {
       list-style: none;
       padding-left: 0;
       line-height: 1.8;
+      text-align: left;
+      display: inline-block;
+      max-width: 600px;
     }
+
     .syllabus li::before {
       content: "✔ ";
       color: #007bff;
     }
+
     .value-text {
       margin-top: 1.5rem;
       font-weight: 500;
       color: #333;
       text-align: center;
     }
-    .payment-options {
+
+    /* PAYMENT */
+    .payment {
       text-align: center;
-      margin-top: 2rem;
+      padding: 3rem 1rem;
     }
+
     .btn-primary {
       background: #007bff;
       color: white;
@@ -151,11 +212,13 @@
       font-weight: 600;
       display: inline-block;
     }
+
     .or {
       margin: 1.5rem 0;
       font-weight: 600;
       color: #555;
     }
+
     .bank-details {
       background: #fff;
       padding: 1.5rem;
@@ -163,6 +226,35 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       display: inline-block;
       text-align: left;
+    }
+
+    /* REGISTER FORM */
+    .register {
+      background: #f1f5f9;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .interest-form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .interest-form input,
+    .interest-form textarea {
+      width: 90%;
+      max-width: 500px;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .interest-form button {
+      cursor: pointer;
     }
   </style>
 </body>
