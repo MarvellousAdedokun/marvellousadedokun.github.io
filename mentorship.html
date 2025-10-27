@@ -9,6 +9,9 @@
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Paystack Library -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 
 <body>
@@ -50,6 +53,7 @@
       <p>All plans include full access to lessons, resources, and live sessions with Marvellous Adedokun.</p>
 
       <div class="tier-grid">
+        <!-- BASIC -->
         <div class="tier-card">
           <h3>Basic Tier</h3>
           <p class="price">₦90,000 <span>/ 6 months</span></p>
@@ -60,8 +64,11 @@
             <li>Hands-on Python projects</li>
             <li>Community support</li>
           </ul>
+          <button class="btn-small" onclick="payWithPaystack(90000)">Pay ₦90,000</button>
+          <button class="btn-small" onclick="payWithPaystack(15000)">Pay ₦15,000 Monthly</button>
         </div>
 
+        <!-- PROFESSIONAL -->
         <div class="tier-card highlight">
           <h3>Professional Tier</h3>
           <p class="price">₦200,000 <span>/ 6 months</span></p>
@@ -72,8 +79,11 @@
             <li>Advanced ML & SQL modules</li>
             <li>Capstone project + career guidance</li>
           </ul>
+          <button class="btn-small" onclick="payWithPaystack(200000)">Pay ₦200,000</button>
+          <button class="btn-small" onclick="payWithPaystack(33000)">Pay ₦33,000 Monthly</button>
         </div>
 
+        <!-- ELITE -->
         <div class="tier-card">
           <h3>Elite Tier</h3>
           <p class="price">₦300,000 <span>/ 6 months</span></p>
@@ -84,6 +94,8 @@
             <li>Interview prep & job placement support</li>
             <li>Direct access to Forgelabs CEO sessions</li>
           </ul>
+          <button class="btn-small" onclick="payWithPaystack(300000)">Pay ₦300,000</button>
+          <button class="btn-small" onclick="payWithPaystack(50000)">Pay ₦50,000 Monthly</button>
         </div>
       </div>
     </div>
@@ -124,5 +136,26 @@
   <footer>
     <p>© 2025 Marvellous Adedokun | Forgelabs. All rights reserved.</p>
   </footer>
+
+  <!-- PAYSTACK SCRIPT -->
+  <script>
+    function payWithPaystack(amount) {
+      let handler = PaystackPop.setup({
+        key: "pk_test_xxxxxxxxxxxxx", // Replace with your test public key
+        email: prompt("Enter your email address"),
+        amount: amount * 100, // in kobo
+        currency: "NGN",
+        callback: function(response){
+          alert("✅ Payment successful! Reference: " + response.reference + 
+                "\nPlease complete your registration via the Google Form.");
+          window.open("https://forms.gle/ajgKeE6VArHPzndJ7", "_blank");
+        },
+        onClose: function(){
+          alert("Transaction was cancelled.");
+        }
+      });
+      handler.openIframe();
+    }
+  </script>
 </body>
 </html>
