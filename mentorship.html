@@ -43,92 +43,110 @@
     </div>
   </section>
 
-  <!-- PAYMENT SECTION (Moved Up) -->
+  <!-- PAYMENT SECTION -->
   <section class="payment">
     <div class="container">
       <h2>💳 Payment Options</h2>
-      <p>
-        You can pay for 6 months at once or opt for monthly payments.  
-        Choose the method that’s most convenient for you.
-      </p>
+      <p class="offer-text">🔥 Limited-Time Discount — Ends In:</p>
+      <div id="countdown" class="countdown-timer"></div>
+      <p class="offer-sub">Enroll before the offer expires to enjoy discounted mentorship fees!</p>
 
-      <div class="bank-details">
-        <h3>Pay by Bank Transfer</h3>
+      <p>Click below to choose your preferred payment method.</p>
+
+      <div class="payment-buttons">
+        <button class="btn paystack-btn">💰 Pay with Paystack</button>
+        <button class="btn bank-btn" onclick="document.getElementById('bank-details').scrollIntoView({behavior:'smooth'});">🏦 Pay via Bank Transfer</button>
+      </div>
+
+      <div id="bank-details" class="bank-details">
+        <h3>Bank Transfer Details</h3>
         <p><b>Account Name:</b> Adedokun Marvellous</p>
         <p><b>Account Number:</b> 8182800319</p>
         <p><b>Bank:</b> OPAY</p>
       </div>
 
-      <p>
-        After payment, please <a href="https://forms.gle/ajgKeE6VArHPzndJ7" target="_blank">click here</a> to send your payment confirmation and upload your receipt.  
-        <br><br>
-        <b>OR</b> you can use Paystack for instant payment by clicking the payment buttons below.
-      </p>
+      <p>After payment, click below to confirm your registration:</p>
+      <a href="https://forms.gle/ajgKeE6VArHPzndJ7" target="_blank" class="btn">📩 Send Payment Confirmation</a>
     </div>
   </section>
 
-  <!-- TIERS SECTION -->
+  <!-- PRICING SECTION -->
   <section class="pricing">
     <div class="container">
       <h2>💼 Choose Your Mentorship Plan</h2>
-      <p>Click a button below to pay securely with Paystack or choose the transfer option above.</p>
+      <p>All plans include full access to lessons, resources, and live sessions with Marvellous Adedokun.</p>
 
       <div class="tier-grid">
+        <!-- BASIC TIER -->
         <div class="tier-card">
           <h3>Basic Tier</h3>
-          <p class="price">₦90,000 <span>/ 6 months</span></p>
-          <p class="monthly">or ₦15,000 / month</p>
+          <p class="price"><del>₦90,000</del> <strong>₦30,000</strong> <span>/ 6 months</span></p>
+          <p class="monthly">or ₦5,000 / month</p>
           <ul>
             <li>Full 6-month access</li>
             <li>Beginner-friendly data science training</li>
             <li>Hands-on Python projects</li>
-            <li>Community support</li>
+            <li>Community-based learning (25–30 learners per cohort)</li>
+            <li>Peer collaboration & mentor support</li>
+            <li>📘 Forgelabs Starter Kit (cheat sheets, tool links, resources)</li>
+            <li>🧩 Mini coding challenges with leaderboards</li>
+            <li>🎧 Monthly webinars & guest talks</li>
+            <li>🎖️ Certificate of Completion</li>
+            <li>📅 Weekly accountability check-ins</li>
           </ul>
-          <button class="btn-small paystack-btn" data-amount="90000">Pay ₦90,000 (Full)</button>
-          <button class="btn-small paystack-btn" data-amount="15000">Pay ₦15,000 (Monthly)</button>
         </div>
 
+        <!-- PROFESSIONAL TIER -->
         <div class="tier-card highlight">
           <h3>Professional Tier</h3>
-          <p class="price">₦200,000 <span>/ 6 months</span></p>
-          <p class="monthly">or ₦33,000 / month</p>
+          <p class="price"><del>₦200,000</del> <strong>₦90,000</strong> <span>/ 6 months</span></p>
+          <p class="monthly">or ₦15,000 / month</p>
           <ul>
-            <li>Everything in Basic</li>
+            <li>Everything in Basic Tier</li>
+            <li>Immediate start (no cohort wait)</li>
             <li>Weekly 1-on-1 mentoring</li>
             <li>Advanced ML & SQL modules</li>
             <li>Capstone project + career guidance</li>
+            <li>🧠 Personalized learning roadmap</li>
+            <li>🗂️ Exclusive advanced ML/SQL resources</li>
+            <li>💬 Private pro group access</li>
+            <li>🧾 CV & LinkedIn profile review</li>
+            <li>🎓 Priority mentor support</li>
           </ul>
-          <button class="btn-small paystack-btn" data-amount="200000">Pay ₦200,000 (Full)</button>
-          <button class="btn-small paystack-btn" data-amount="33000">Pay ₦33,000 (Monthly)</button>
         </div>
 
+        <!-- ELITE TIER -->
         <div class="tier-card">
           <h3>Elite Tier</h3>
-          <p class="price">₦300,000 <span>/ 6 months</span></p>
-          <p class="monthly">or ₦50,000 / month</p>
+          <p class="price"><del>₦300,000</del> <strong>₦200,000</strong> <span>/ 6 months</span></p>
+          <p class="monthly">or ₦33,000 / month</p>
           <ul>
-            <li>Everything in Professional</li>
-            <li>Portfolio project review & publishing</li>
+            <li>Everything in Professional Tier</li>
+            <li>Portfolio project publishing</li>
             <li>Interview prep & job placement support</li>
-            <li>Direct access to Forgelabs CEO sessions</li>
+            <li>Direct CEO mentorship</li>
+            <li>♾️ Lifetime course & community access</li>
+            <li>🌐 Elite alumni network</li>
+            <li>💼 Industry referrals & internships</li>
+            <li>🧭 Personal brand coaching</li>
+            <li>🎤 Spotlight feature on Forgelabs socials</li>
+            <li>🚀 Annual career check-ins</li>
           </ul>
-          <button class="btn-small paystack-btn" data-amount="300000">Pay ₦300,000 (Full)</button>
-          <button class="btn-small paystack-btn" data-amount="50000">Pay ₦50,000 (Monthly)</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- REFUND POLICY -->
+  <!-- GUARANTEE -->
   <section class="guarantee">
     <div class="container">
       <h2>🛡 110% Value Guarantee</h2>
       <p>
         We’re confident you’ll gain far more value than you pay.  
-        But if at any point you evaluate the course and feel it’s not delivering what was promised,  
-        you can request a full refund <b>plus 10% extra</b> — subject to our simple terms and conditions.
+        If at any point you feel it’s not delivering what was promised,  
+        you can request a full refund <b>plus 10% extra</b> — subject to simple terms.
       </p>
-      <p><small>*We only ask that you complete the first 2 modules and submit your feedback before refund processing.</small></p>
+      <p><small>*We only ask that you complete the first 2 modules and submit feedback before refund processing.</small></p>
     </div>
   </section>
 
@@ -137,28 +155,32 @@
     <p>© 2025 Marvellous Adedokun | Forgelabs. All rights reserved.</p>
   </footer>
 
-  <!-- PAYSTACK SCRIPT -->
-  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <!-- COUNTDOWN SCRIPT -->
   <script>
-    const paystackButtons = document.querySelectorAll('.paystack-btn');
-    paystackButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const amount = button.getAttribute('data-amount') * 100; // Paystack expects kobo
-        const handler = PaystackPop.setup({
-          key: 'pk_live_e6f50c83f4898510735cf07056e6e2eb9c93b144', // replace with your real key later
-          email: 'customer@email.com',
-          amount: amount,
-          currency: 'NGN',
-          callback: function(response) {
-            alert('Payment successful! Reference: ' + response.reference);
-          },
-          onClose: function() {
-            alert('Payment window closed.');
-          }
-        });
-        handler.openIframe();
-      });
-    });
+  const countdownElement = document.getElementById("countdown");
+  const offerEndDate = new Date();
+  offerEndDate.setDate(offerEndDate.getDate() + 20);
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = offerEndDate.getTime() - now;
+
+    if (distance < 0) {
+      countdownElement.innerHTML = "⏳ Offer Expired!";
+      countdownElement.classList.add("expired");
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
   </script>
 </body>
 </html>
