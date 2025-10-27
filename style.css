@@ -535,3 +535,65 @@ footer {
 .page-header .navbar a.active {
   color: #38bdf8;
 }
+
+/* Ensure grid items stretch to equal height */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* make sure items stretch */
+}
+
+/* Make each card a vertical flex container and push footer to bottom */
+.tier-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps footer (buttons) at bottom */
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e6eef6;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Ensure the content area grows, and list doesn't push footer up */
+.tier-card > ul {
+  margin: 1rem 0 1rem 0;
+  padding-left: 1rem;
+  flex-grow: 1;
+}
+
+/* Wrap buttons in a footer block and make them full width */
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.card-footer .btn-small {
+  flex: 1 1 48%;
+  min-width: 140px;
+  padding: 0.7rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Make the highlight card visually distinct */
+.tier-card.highlight {
+  border: 2px solid #0ea5e9;
+  background: linear-gradient(180deg, #e6f6ff 0%, #ffffff 100%);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .card-footer .btn-small {
+    flex: 1 1 100%;
+  }
+}
