@@ -9,9 +9,6 @@
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Paystack Library -->
-  <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 
 <body>
@@ -46,14 +43,37 @@
     </div>
   </section>
 
+  <!-- PAYMENT SECTION (Moved Up) -->
+  <section class="payment">
+    <div class="container">
+      <h2>💳 Payment Options</h2>
+      <p>
+        You can pay for 6 months at once or opt for monthly payments.  
+        Choose the method that’s most convenient for you.
+      </p>
+
+      <div class="bank-details">
+        <h3>Pay by Bank Transfer</h3>
+        <p><b>Account Name:</b> Adedokun Marvellous</p>
+        <p><b>Account Number:</b> 8182800319</p>
+        <p><b>Bank:</b> OPAY</p>
+      </div>
+
+      <p>
+        After payment, please <a href="https://forms.gle/ajgKeE6VArHPzndJ7" target="_blank">click here</a> to send your payment confirmation and upload your receipt.  
+        <br><br>
+        <b>OR</b> you can use Paystack for instant payment by clicking the payment buttons below.
+      </p>
+    </div>
+  </section>
+
   <!-- TIERS SECTION -->
   <section class="pricing">
     <div class="container">
       <h2>💼 Choose Your Mentorship Plan</h2>
-      <p>All plans include full access to lessons, resources, and live sessions with Marvellous Adedokun.</p>
+      <p>Click a button below to pay securely with Paystack or choose the transfer option above.</p>
 
       <div class="tier-grid">
-        <!-- BASIC -->
         <div class="tier-card">
           <h3>Basic Tier</h3>
           <p class="price">₦90,000 <span>/ 6 months</span></p>
@@ -64,11 +84,10 @@
             <li>Hands-on Python projects</li>
             <li>Community support</li>
           </ul>
-          <button class="btn-small" onclick="payWithPaystack(90000)">Pay ₦90,000</button>
-          <button class="btn-small" onclick="payWithPaystack(15000)">Pay ₦15,000 Monthly</button>
+          <button class="btn-small paystack-btn" data-amount="90000">Pay ₦90,000 (Full)</button>
+          <button class="btn-small paystack-btn" data-amount="15000">Pay ₦15,000 (Monthly)</button>
         </div>
 
-        <!-- PROFESSIONAL -->
         <div class="tier-card highlight">
           <h3>Professional Tier</h3>
           <p class="price">₦200,000 <span>/ 6 months</span></p>
@@ -79,11 +98,10 @@
             <li>Advanced ML & SQL modules</li>
             <li>Capstone project + career guidance</li>
           </ul>
-          <button class="btn-small" onclick="payWithPaystack(200000)">Pay ₦200,000</button>
-          <button class="btn-small" onclick="payWithPaystack(33000)">Pay ₦33,000 Monthly</button>
+          <button class="btn-small paystack-btn" data-amount="200000">Pay ₦200,000 (Full)</button>
+          <button class="btn-small paystack-btn" data-amount="33000">Pay ₦33,000 (Monthly)</button>
         </div>
 
-        <!-- ELITE -->
         <div class="tier-card">
           <h3>Elite Tier</h3>
           <p class="price">₦300,000 <span>/ 6 months</span></p>
@@ -94,28 +112,10 @@
             <li>Interview prep & job placement support</li>
             <li>Direct access to Forgelabs CEO sessions</li>
           </ul>
-          <button class="btn-small" onclick="payWithPaystack(300000)">Pay ₦300,000</button>
-          <button class="btn-small" onclick="payWithPaystack(50000)">Pay ₦50,000 Monthly</button>
+          <button class="btn-small paystack-btn" data-amount="300000">Pay ₦300,000 (Full)</button>
+          <button class="btn-small paystack-btn" data-amount="50000">Pay ₦50,000 (Monthly)</button>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- PAYMENT SECTION -->
-  <section class="payment">
-    <div class="container">
-      <h2>💳 Payment Options</h2>
-      <p>You can pay for 6 months at once or opt for monthly payments.</p>
-
-      <div class="bank-details">
-        <h3>Bank Transfer</h3>
-        <p><b>Account Name:</b> Adedokun Marvellous</p>
-        <p><b>Account Number:</b> 8182800319</p>
-        <p><b>Bank:</b> OPAY</p>
-      </div>
-
-      <p>After payment, click below to confirm your registration:</p>
-      <a href="https://forms.gle/ajgKeE6VArHPzndJ7" target="_blank" class="btn">📩 Send Payment Confirmation</a>
     </div>
   </section>
 
@@ -138,24 +138,27 @@
   </footer>
 
   <!-- PAYSTACK SCRIPT -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
   <script>
-    function payWithPaystack(amount) {
-      let handler = PaystackPop.setup({
-        key: "pk_live_e6f50c83f4898510735cf07056e6e2eb9c93b144",
-        email: prompt("Enter your email address"),
-        amount: amount * 100, // in kobo
-        currency: "NGN",
-        callback: function(response){
-          alert("✅ Payment successful! Reference: " + response.reference + 
-                "\nPlease complete your registration via the Google Form.");
-          window.open("https://forms.gle/ajgKeE6VArHPzndJ7", "_blank");
-        },
-        onClose: function(){
-          alert("Transaction was cancelled.");
-        }
+    const paystackButtons = document.querySelectorAll('.paystack-btn');
+    paystackButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const amount = button.getAttribute('data-amount') * 100; // Paystack expects kobo
+        const handler = PaystackPop.setup({
+          key: 'pk_live_e6f50c83f4898510735cf07056e6e2eb9c93b144', // replace with your real key later
+          email: 'customer@email.com',
+          amount: amount,
+          currency: 'NGN',
+          callback: function(response) {
+            alert('Payment successful! Reference: ' + response.reference);
+          },
+          onClose: function() {
+            alert('Payment window closed.');
+          }
+        });
+        handler.openIframe();
       });
-      handler.openIframe();
-    }
+    });
   </script>
 </body>
 </html>
