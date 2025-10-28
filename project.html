@@ -12,6 +12,34 @@
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Blue gradient button for GitHub link */
+    .btn-github {
+      display: inline-block;
+      background: linear-gradient(90deg, #007bff, #0056d2);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.9rem 1.8rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 91, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-github:hover {
+      background: linear-gradient(90deg, #0056d2, #007bff);
+      box-shadow: 0 6px 25px rgba(0, 91, 255, 0.5);
+      transform: translateY(-3px);
+    }
+
+    .more-projects {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -67,12 +95,11 @@
       </div>
 
       <!-- MORE PROJECTS BUTTON -->
-      <div class="more-projects" style="text-align:center; margin-top: 2rem;">
-        <a href="https://github.com/MarvellousAdedokun?tab=repositories" target="_blank" class="btn-small" style="font-weight:600; padding:0.8rem 1.5rem;">
+      <div class="more-projects">
+        <a href="https://github.com/MarvellousAdedokun" target="_blank" class="btn-github">
           🔗 View More Projects on GitHub
         </a>
       </div>
-
     </div>
   </main>
 
